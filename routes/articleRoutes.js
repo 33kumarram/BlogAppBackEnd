@@ -4,7 +4,7 @@ const authorize = require('../middlewares/authMiddleware')
 
 const router = express.Router()
 
-router.route('/:category').get(authorize, getArticles)
+router.route('/:category').get(getArticles)
 router.route('/getbyid/:id').get(authorize, getArticleById)
 router.route('/save').post(authorize, saveArticle)
 router.route('/update/:id').post(authorize, updateArticle)
